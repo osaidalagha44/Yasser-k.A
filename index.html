@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>صدقة جارية عن روح ياسر كمال الأغا</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+    body {
+      margin: 0;
+      font-family: 'Amiri', serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+    .intro {
+      text-align: center;
+      padding: 50px 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #f0e68c;
+    }
+    .sections {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+    .section-btn {
+      width: 80%;
+      max-width: 400px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #f0e68c;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      font-size: 20px;
+      text-align: right;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: background 0.3s ease;
+    }
+    .section-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .section-icon {
+      font-size: 26px;
+    }
+    .azkar-container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      display: none;
+    }
+    .azkar-container.active {
+      display: block;
+    }
+    .azkar-item {
+      background: rgba(255, 255, 255, 0.15);
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .count {
+      color: #f0e68c;
+      margin-top: 5px;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script>
+    function showAzkar(section) {
+      const containers = document.querySelectorAll(".azkar-container");
+      containers.forEach((c) => c.classList.remove("active"));
+      document.getElementById(section).classList.add("active");
+    }
+  </script>
+</head>
+<body>
+  <div class="intro">
+    <h1>صدقة جارية عن روح</h1>
+    <h1>ياسر كمال الأغا</h1>
+    <p>اختر أحد الأقسام لعرض الأذكار والأدعية</p>
+  </div>
+  <div class="sections">
+    <div class="section-btn" onclick="showAzkar('morning')">
+      <span class="section-icon">🌅</span> أذكار الصباح
+    </div>
+    <div class="section-btn" onclick="showAzkar('evening')">
+      <span class="section-icon">🌇</span> أذكار المساء
+    </div>
+    <div class="section-btn" onclick="showAzkar('prophets')">
+      <span class="section-icon">📜</span> أدعية الرسل
+    </div>
+    <div class="section-btn" onclick="showAzkar('dead')">
+      <span class="section-icon">🕊️</span> أدعية الميت
+    </div>
+    <div class="section-btn" onclick="showAzkar('afterprayer')">
+      <span class="section-icon">🕌</span> أذكار بعد الصلاة
+    </div>
+  </div>
+
+  <div id="morning" class="azkar-container active">
+    <div class="azkar-item">
+      <div>اللّهـمَّ أَنْتَ رَبِّـي لا إلهَ إلاّ أَنْتَ، خَلَقْتَنـي وَأَنَا عَبْـدُك... (أكمل الذكر)</div>
+      <div class="count">1 مرة</div>
+    </div>
+    <div class="azkar-item">
+      <div>اللّهـمَّ صَـبِّحْني صَباحاً يُبَـارَك فـيه، مَشْـمولاً عَفْـوك، مَجْـبولاً رِضـاك.</div>
+      <div class="count">1 مرة</div>
+    </div>
+  </div>
+
+  <div id="evening" class="azkar-container">
+    <div class="azkar-item">
+      <div>اللّهُمَّ ما أمسى بي من نعمةٍ أو بأحدٍ من خلقك فمنك وحدك لا شريك لك... (أكمل الذكر)</div>
+      <div class="count">1 مرة</div>
+    </div>
+  </div>
+
+  <div id="prophets" class="azkar-container">
+    <div class="azkar-item">
+      <div>رَبِّ اشْرَحْ لِي صَدْرِي * وَيَسِّرْ لِي أَمْرِي * وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي...</div>
+      <div class="count">1 مرة</div>
+    </div>
+  </div>
+
+  <div id="dead" class="azkar-container">
+    <div class="azkar-item">
+      <div>اللّهُمَّ اغْفِرْ له وَارْحَمْهُ، وَثَبِّتْهُ عِنْدَ السُّؤَال، وَجَازِهِ بِالإِحْسَانِ إِحْسَانًا...</div>
+      <div class="count">1 مرة</div>
+    </div>
+  </div>
+
+  <div id="afterprayer" class="azkar-container">
+    <div class="azkar-item">
+      <div>أستغفر الله، أستغفر الله، أستغفر الله</div>
+      <div class="count">3 مرات</div>
+    </div>
+    <div class="azkar-item">
+      <div>اللهم أنت السلام ومنك السلام، تباركت يا ذا الجلال والإكرام</div>
+      <div class="count">1 مرة</div>
+    </div>
+  </div>
+</body>
+</html>
